@@ -2,4 +2,8 @@ import {config} from "dotenv";
 import { main } from "./server";
 
 config();
-main();
+try{
+    main();
+} catch(err){
+    console.log(err);
+}
