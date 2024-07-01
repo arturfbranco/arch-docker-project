@@ -6,8 +6,8 @@
     "build": "npm i && rm -rf build && tsc",
     "build-w": "npm i && rm -rf build && tsc -w",
     "start": "node build/index.js",
-    "run": "npm run build && npm start",
-    "docker": "docker build -t arch-docker-project . && docker-compose up"
+    "docker": "docker build -t arch-docker-project . && docker-compose up",
+    "docker-clean": "docker-compose down && docker rmi arch-docker-project"
   },
   "keywords": [],
   "author": "",
