@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "npm i && rm -rf dist && tsc",
+    "build": "npm i && rm -rf build && tsc",
     "build-w": "npm i && rm -rf build && tsc -w",
     "start": "node build/index.js",
     "run": "npm run build && npm start",
-    "docker": "docker build -t arch-docker-project . && docker-compose up --build"
+    "docker": "docker build -t arch-docker-project . && docker-compose up"
   },
   "keywords": [],
   "author": "",
