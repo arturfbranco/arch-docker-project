@@ -5,6 +5,7 @@ import { Expense } from "./expense";
 
 export const main = async () => {
 
+
 const servicePort = process.env.PORT;
 
 connectToDatabase();
@@ -24,7 +25,7 @@ app.post('/register', async (req: Request, res: Response) => {
 
     try{
         const response = await expense.save();
-        res.send(response);
+        res.send({description: response.description, category: response.category, amount: response.amount});
 
     } catch(err) {
         res.status(500).send('Failed to register');

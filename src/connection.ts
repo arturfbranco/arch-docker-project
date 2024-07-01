@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const mongoHost = process.env.MONGO_HOST || "localhost";
-const mongoPort = process.env.MONGO_PORT || 27017;
+const mongoHost = process.env.MONGO_HOST;
+const mongoPort = process.env.MONGO_PORT;
 
 export const connectToDatabase = async () => {
     try{
